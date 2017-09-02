@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <!-- Global Start -->
+    
+    <bean id="404ErrorPage" class="org.springframework.web.servlet.view.JstlView">
+    	<property name="url" value="/WEB-INF/pages/error/error404.jsp" />
+    </bean>
+    
+    <!-- Global End -->
+    
+    <!-- Authentication Start -->
+    
+    <bean id="loginPage" class="org.springframework.web.servlet.view.JstlView">
+    	<property name="url" value="/WEB-INF/pages/login/login.jsp" />
+    </bean>
+    
+    <bean id="userNotFoundPage" class="org.springframework.web.servlet.view.JstlView">
+    	<property name="url" value="/WEB-INF/pages/error/userNotFound.jsp" />
+    </bean>
+    
+    <!-- Authentication End -->
+     
+     <!-- 
+    <bean id="excelView" class="com.app.excel.export.ExcelBuilder" />
+    <bean id="delinquentExcel" class="com.app.excel.export.DelinquentExcelBuilder" />
+    <bean id="excelExport" class="com.app.excel.export.ExcelExportBuilder" />
+    <bean id="demoExcel" class="com.app.excel.export.DemoBuilder" />
+    -->
+    
+    <bean id="unauthorizedAccessPage2" class="org.springframework.web.servlet.view.JstlView">
+    	<property name="url" value="/WEB-INF/pages/login/unauthorizedAccess.jsp" />
+    </bean>
+    
+    <bean id="testScript" class="org.springframework.web.servlet.view.JstlView">
+    	<property name="url" value="/WEB-INF/pages/test/hello.jsp" />
+    </bean>
+    
+    <bean id="testNonThemeTestPage" class="org.springframework.web.servlet.view.JstlView">
+    	<property name="url" value="/WEB-INF/pages/test/testNonThemeTest.jsp" />
+    </bean>
+    
+    <bean id="testFormSubmitPage" class="org.springframework.web.servlet.view.JstlView">
+    	<property name="url" value="/WEB-INF/pages/test/testFormSubmit.jsp" />
+    </bean>
+    
+    <bean id="testIndexPage" class="org.springframework.web.servlet.view.JstlView">
+    	<property name="url" value="/WEB-INF/pages/test/index.jsp" />
+    </bean>
+    
+    <bean id="partialJspRenderedPageAjax" class="org.springframework.web.servlet.view.JstlView">
+    	<property name="url" value="/WEB-INF/pages/test/demo/ajaxRenderedPage.jsp" />
+    </bean>
+    
+    <bean id="testSuperAuthPage" class="org.springframework.web.servlet.view.JstlView">
+    	<property name="url" value="/WEB-INF/pages/test/testSuperAuthPage.jsp" />
+    </bean>
+    
+</beans>
